@@ -1,0 +1,12 @@
+
+.button {
+    padding: 1em;
+    background: gold;
+}
+
+.disabled {
+    composes: button;
+    background: gray;
+    cursor: wait;
+}
+

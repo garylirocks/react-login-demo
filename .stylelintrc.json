@@ -1,0 +1,15 @@
+{
+    "processors": [],
+    "extends": [
+        "stylelint-config-standard"
+    ],
+    "syntax": "scss",
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "rules": {
+        "indentation": [4, { "severity": "warning" }],
+        "at-rule-no-unknown": null,
+        "number-leading-zero": null
+    }
+}

@@ -1,0 +1,10 @@
+@import './base';
+
+body {
+    background: $primaryColor;
+}
+
+:global(.highlight) {
+    background: $highlightColor;
+    color: purple;
+}
