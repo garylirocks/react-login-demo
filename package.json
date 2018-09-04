@@ -12,6 +12,7 @@
     "@material-ui/core": "^1.2.0",
     "babel-polyfill": "^6.26.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "immer": "^1.5.0",
     "keymirror": "^0.1.1",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",

@@ -1,28 +1,29 @@
 import { combineReducers } from 'redux';
 import { reducer as reduxFormReducer } from 'redux-form';
+import produce from 'immer';
 import C from '../constants';
 
-export const user = (state = {authed: false}, action) => {
+export const user = produce((draft, action) => {
   switch (action.type) {
     case C.LOGIN_PENDING:
-      return {
-        ...state,
-        authed: false,
-        isLoading: true,
-      };
+      draft.isLoading = true;
+      break;
+
     case C.LOGIN_FULFILLED:
-      return {
-        ...action.payload,
-        authed: true,
-      };
+      draft.authed = true;
+      draft.isLoading = false;
+      break;
+
     case C.LOGOUT:
-      return {
-        authed: false,
-      };
+      draft.authed = false;
+      break;
+
     default:
-      return state;
+      break;
   }
-};
+}, {
+  authed: false,
+});
 
 export const items = (state = {}, action) => {
   switch (action.type) {
